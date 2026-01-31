@@ -1,0 +1,25 @@
+{
+  "name": "@anonx3247/tasks-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for agent task planning and tracking",
+  "main": "dist/index.js",
+  "bin": {
+    "tasks-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
