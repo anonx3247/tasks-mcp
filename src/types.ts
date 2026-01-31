@@ -23,3 +23,15 @@ export const UpdateTaskInput = z.object({
   id: z.string(),
   status: z.enum(["progress", "complete", "failed"]),
 });
+
+export type TaskStoreListener = (tasks: readonly TaskEntry[]) => void;
+
+export interface TasksMcpServer {
+  server: import("@modelcontextprotocol/sdk/server/index.js").Server;
+  store: TaskStore;
+}
+
+export interface TaskStore {
+  getTasks(): readonly TaskEntry[];
+  onChange(listener: TaskStoreListener): () => void;
+}

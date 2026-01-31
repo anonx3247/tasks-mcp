@@ -1,10 +1,21 @@
 {
   "name": "@anonx3247/tasks-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for agent task planning and tracking",
-  "main": "dist/index.js",
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
   "bin": {
     "tasks-mcp": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/lib.js",
+      "types": "./dist/lib.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server.js",
+      "types": "./dist/server.d.ts"
+    }
   },
   "scripts": {
     "build": "tsc",
