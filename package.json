@@ -1,6 +1,6 @@
 {
   "name": "@anonx3247/tasks-mcp",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "MCP server for agent task planning and tracking",
   "main": "dist/lib.js",
   "types": "dist/lib.d.ts",

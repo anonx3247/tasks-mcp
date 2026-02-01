@@ -24,6 +24,10 @@ export const UpdateTaskInput = z.object({
   status: z.enum(["progress", "complete", "failed"]),
 });
 
+export const ResultInput = z.object({
+  result: z.string(),
+});
+
 export type TaskStoreListener = (tasks: readonly TaskEntry[]) => void;
 
 export interface TasksMcpServer {
@@ -33,5 +37,6 @@ export interface TasksMcpServer {
 
 export interface TaskStore {
   getTasks(): readonly TaskEntry[];
+  getResult(): string | null;
   onChange(listener: TaskStoreListener): () => void;
 }
